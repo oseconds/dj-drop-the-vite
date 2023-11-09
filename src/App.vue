@@ -2,7 +2,7 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <div>
     <h4>XX 에이블톤</h4>
-    <p>XX 어쩌고</p>
+    <p>XX 어쩌고 </p>
   </div>
 </template>
 

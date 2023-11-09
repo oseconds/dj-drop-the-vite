@@ -30,11 +30,18 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+<template>
+  <div>
+    {{ contents }}
+  </div>
+</template>
+
+<script> 
+import post from "../../public/posts/testpost.md";
+
+data() {
+  return {
+    contents: post
   }
 }
 </script>

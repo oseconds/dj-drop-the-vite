@@ -1,5 +1,5 @@
 export default {
-    base: '/vite/'
+    base: '/vite/',
     root: "src",
     build: {
         outDir: "../public",

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="라이브 오디오-비주얼을 위한 핸드북"/>
+    <meta name="description" content="라이브 오디오-비주얼을 위한 핸드북" />
     <meta name="keyword" content="Ableton, Max MSP, Touch Designer, P5.js, and more" />
-    <title> Creative trivia for generative arts </title>
+    <title> 0seconds </title>
 
     <!-- <link rel="icon" type="image/svg+xml" href="assets/img/0secondsfavicon.svg" /> -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-510b6d2a.png">
@@ -18,12 +19,86 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+
     
-    
-  <script type="module" crossorigin src="/assets/index-54d46c75.js"></script>
+  <script type="module" crossorigin src="/assets/index-04d217be.js"></script>
+  <link rel="stylesheet" href="/assets/index-127e0f7c.css">
 </head>
+
 <body>
-    <h1>Vite 시작</h1>
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#intro">소개 영역 바로가기</a>
+        <a href="#skill">스킬 영역 바로가기</a>
+        <a href="#site">사이트 영역 바로가기</a>
+        <a href="#port">포트폴리오 영역 바로가기</a>
+        <a href="#contact">연락처 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header" role="banner">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="#">0seconds<em>Jack of all trades</em></a>
+            </div>
+            <nav class="header__nav" role="navigation" aria-label="메인 메뉴">
+                <ul>
+                    <li><a href="#intro">intro</a></li>
+                    <li><a href="#skill">skill</a></li>
+                    <li><a href="#site">site</a></li>
+                    <li><a href="#port">portfolio</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+            <div 
+                class="header__nav__mobile" 
+                id="headerToggle" 
+                aria-controls="primary-menu" 
+                aria-expanded="false" 
+                role="button" 
+                tabindex="0"
+            >
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main" role="main">
+        <section id="intro">
+            intro
+        </section>
+        <!-- //intro -->
+
+        <section id="skill">
+            skill
+        </section>
+        <!-- //skill -->
+
+        <section id="site">
+            site
+        </section>
+        <!-- //site -->
+
+        <section id="port">
+            port
+        </section>
+        <!-- //port -->
+
+        <section id="contact">
+            contact
+        </section>
+        <!-- //contact -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer" role="contentinfo">
+        footer
+    </footer>
+    <!-- //footer -->
+
     
 </body>
+
 </html>

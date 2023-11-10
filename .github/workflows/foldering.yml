@@ -10,6 +10,8 @@ permissions:
   pages: write
   id-token: write
 
+# ...
+
 jobs:
   deploy:
     environment:
@@ -20,19 +22,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          path: 'vite/public'
-      - name: Change directory
-        run: cd vite/public
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: 'npm'
-      - name: Install dependencies
-        run: npm install
+          path: 'vite/public'  # 저장소를 특정 디렉토리로 체크아웃
+      - name: Change directory and Install dependencies
+        run: |
+          cd vite/public   # 디렉토리 변경
+          npm install
       - name: Build
-        run: npm run build
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
-        with:
-          working-directory: 'vite/public'
+        run: |
+          cd vite/public   # 디렉토리 변경
+          npm run build
+      # ...

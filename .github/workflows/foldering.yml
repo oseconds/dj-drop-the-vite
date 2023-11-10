@@ -40,11 +40,11 @@ jobs:
           cache: 'npm'
       - name: Change directory and Install dependencies
         run: |
-          cd vite/public   # 디렉토리 변경
+          cd $GITHUB_WORKSPACE/vite/public   # 디렉토리 변경
           npm install
       - name: Build
         run: |
-          cd vite/public   # 디렉토리 변경
+          cd $GITHUB_WORKSPACE/vite/public   # 디렉토리 변경
           npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v3

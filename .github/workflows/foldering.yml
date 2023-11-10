@@ -39,7 +39,8 @@ jobs:
           node-version: 18
           cache: 'npm'
       - name: Change directory and Install dependencies
-        run: 
+        run: |
+          cd ./vite/   # 디렉토리 변경
           npm install
       - name: Build
         run: 

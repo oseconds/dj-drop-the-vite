@@ -20,8 +20,9 @@ concurrency:
   group: 'pages'
   cancel-in-progress: true
 
+# ...
+
 jobs:
-  # 단순히 배포만 수행하기에 하나의 잡으로만 구성
   deploy:
     environment:
       name: github-pages
@@ -30,22 +31,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          path: 'vite/public'  # 저장소를 특정 디렉토리로 체크아웃
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: 'npm'
-      - name: Install dependencies
-        run: npm install
+      - name: Change directory and Install dependencies
+        run: |
+          cd $GITHUB_WORKSPACE/vite/public   # 디렉토리 변경
+          npm install
       - name: Build
-        run: npm run build
+        run: |
+          cd $GITHUB_WORKSPACE/vite/public   # 디렉토리 변경
+          npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # dist 디렉터리 업로드
-          path: './vite/public'
+          path: 'vite/public'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+
+# ...

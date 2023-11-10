@@ -27,5 +27,5 @@ vite 공부 시작
 
 ![image](https://github.com/oseconds/oseconds.github.io/assets/123317581/b4490251-3d11-49a4-a828-bd092f0a3583)
 
-ㄷㄷ 신기하다   
+
 11-10-19-09
